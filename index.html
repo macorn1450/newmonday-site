@@ -9,180 +9,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --cream:   #F2EDE6;
-    --charcoal: #313131;
-    --ivory:   #FBF7F2;
-    --tan:     #D9CFC4;
-    --midtone: #8C8279;
-    --sans: 'DM Sans', sans-serif;
-    --serif: 'Cormorant Garamond', serif;
+    --cream: #F2EDE6; --charcoal: #313131; --ivory: #FBF7F2;
+    --tan: #D9CFC4; --midtone: #8C8279;
+    --sans: 'DM Sans', sans-serif; --serif: 'Cormorant Garamond', serif;
   }
-
   html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--cream);
-    color: var(--charcoal);
-    font-family: var(--sans);
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: var(--charcoal);
-    padding: 0 48px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .nav-logo {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    color: var(--ivory);
-    text-decoration: none;
-  }
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    list-style: none;
-  }
-  .nav-links a {
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--ivory);
-    text-decoration: none;
-    opacity: 0.75;
-    transition: opacity 0.2s;
-  }
+  body { background: var(--cream); color: var(--charcoal); font-family: var(--sans); font-weight: 300; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--charcoal); padding: 0 48px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 1.8px; text-transform: uppercase; color: var(--ivory); text-decoration: none; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ivory); text-decoration: none; opacity: 0.75; transition: opacity 0.2s; }
   .nav-links a:hover { opacity: 1; }
-
-  @media (max-width: 768px) {
-    nav { padding: 0 24px; }
-    .nav-links { gap: 20px; }
-  }
-  @media (max-width: 540px) {
-    .nav-links { display: none; }
-  }
-
-  /* HERO */
-  .hero {
-    background: var(--charcoal);
-    color: var(--ivory);
-    padding: 160px 48px 100px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  .hero-eyebrow {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--tan);
-    margin-bottom: 32px;
-  }
-  .hero-title {
-    font-family: var(--sans);
-    font-size: clamp(48px, 8vw, 96px);
-    font-weight: 200;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    line-height: 1.0;
-    color: var(--ivory);
-    margin-bottom: 40px;
-  }
-  .hero-sub {
-    font-family: var(--serif);
-    font-size: clamp(18px, 2vw, 24px);
-    font-weight: 300;
-    font-style: italic;
-    color: var(--tan);
-    max-width: 540px;
-    line-height: 1.5;
-    margin-bottom: 24px;
-  }
-  .hero-tagline {
-    font-family: var(--sans);
-    font-size: 17px;
-    font-weight: 300;
-    letter-spacing: 0.04em;
-    color: var(--midtone);
-    margin-bottom: 48px;
-  }
-  .btn {
-    display: inline-block;
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--ivory);
-    background: transparent;
-    border: 1px solid var(--ivory);
-    border-radius: 4px;
-    padding: 14px 36px;
-    text-decoration: none;
-    transition: background 0.25s, color 0.25s;
-  }
+  @media (max-width: 768px) { nav { padding: 0 24px; } .nav-links { gap: 20px; } }
+  @media (max-width: 540px) { .nav-links { display: none; } }
+  .hero { background: var(--charcoal); color: var(--ivory); padding: 160px 48px 100px; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero-eyebrow { font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--tan); margin-bottom: 32px; }
+  .hero-title { font-family: var(--sans); font-size: clamp(48px, 8vw, 96px); font-weight: 200; letter-spacing: 3px; text-transform: uppercase; line-height: 1.0; color: var(--ivory); margin-bottom: 40px; }
+  .hero-sub { font-family: var(--serif); font-size: clamp(18px, 2vw, 24px); font-weight: 300; font-style: italic; color: var(--tan); max-width: 540px; line-height: 1.5; margin-bottom: 24px; }
+  .hero-tagline { font-family: var(--sans); font-size: 17px; font-weight: 300; letter-spacing: 0.04em; color: var(--midtone); margin-bottom: 48px; }
+  .btn { display: inline-block; font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ivory); background: transparent; border: 1px solid var(--ivory); border-radius: 4px; padding: 14px 36px; text-decoration: none; transition: background 0.25s, color 0.25s; }
   .btn:hover { background: var(--ivory); color: var(--charcoal); }
   .btn-dark { background: var(--charcoal); color: var(--ivory); border-color: var(--charcoal); }
   .btn-dark:hover { background: transparent; color: var(--charcoal); border-color: var(--charcoal); }
-
-  /* SECTIONS */
-  section {
-    padding: 96px 48px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  section { padding: 96px 48px; max-width: 1200px; margin: 0 auto; }
   section.full-width { max-width: none; padding: 96px 0; }
   .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
-  .section-label {
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--midtone);
-    margin-bottom: 24px;
-  }
-  .section-title {
-    font-family: var(--sans);
-    font-size: clamp(22px, 3vw, 32px);
-    font-weight: 300;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    margin-bottom: 40px;
-  }
-  .section-body {
-    font-family: var(--serif);
-    font-size: clamp(18px, 1.8vw, 22px);
-    font-weight: 300;
-    line-height: 1.65;
-    color: var(--charcoal);
-    max-width: 680px;
-  }
-
+  .section-label { font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--midtone); margin-bottom: 24px; }
+  .section-title { font-family: var(--sans); font-size: clamp(22px, 3vw, 32px); font-weight: 300; letter-spacing: 1.4px; text-transform: uppercase; color: var(--charcoal); margin-bottom: 40px; }
+  .section-body { font-family: var(--serif); font-size: clamp(18px, 1.8vw, 22px); font-weight: 300; line-height: 1.65; color: var(--charcoal); max-width: 680px; }
+  .manifesto { background: var(--cream); padding: 96px 48px; border-bottom: 1px solid var(--tan); }
+  .manifesto-inner { max-width: 760px; margin: 0 auto; }
+  .manifesto p { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 26px); font-weight: 300; line-height: 1.72; color: var(--charcoal); margin-bottom: 36px; }
+  .manifesto p.manifesto-kicker { font-family: var(--sans); font-size: 17px; font-weight: 400; letter-spacing: 0.04em; color: var(--midtone); margin-bottom: 0; margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--tan); }
   .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   @media (max-width: 768px) { .what-grid { grid-template-columns: 1fr; } }
-
   .tiers-section { background: var(--charcoal); color: var(--ivory); }
   .tiers-section .section-label { color: var(--tan); }
   .tiers-section .section-title { color: var(--ivory); }
@@ -197,35 +58,29 @@
   .tier-features { list-style: none; border-top: 1px solid rgba(251,247,242,0.15); padding-top: 28px; }
   .tier-features li { font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--ivory); opacity: 0.8; padding: 8px 0; border-bottom: 1px solid rgba(251,247,242,0.08); display: flex; align-items: flex-start; gap: 10px; }
   .tier-features li::before { content: '—'; color: var(--tan); flex-shrink: 0; margin-top: 1px; }
-
   .del-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
   @media (max-width: 768px) { .del-grid { grid-template-columns: 1fr; } }
   .del-num { font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 1.4px; color: var(--midtone); margin-bottom: 12px; }
   .del-title { font-family: var(--sans); font-size: 13px; font-weight: 400; letter-spacing: 1.2px; text-transform: uppercase; color: var(--charcoal); margin-bottom: 10px; }
   .del-desc { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--charcoal); opacity: 0.75; line-height: 1.6; }
-
   .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
   @media (max-width: 768px) { .terms-grid { grid-template-columns: 1fr; } }
   .terms-title { font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--midtone); margin-bottom: 20px; }
   .terms-list { list-style: none; }
   .terms-list li { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--charcoal); padding: 10px 0; border-bottom: 1px solid var(--tan); display: flex; gap: 12px; }
   .terms-list li::before { content: '·'; color: var(--midtone); flex-shrink: 0; }
-
   .cta-section { background: var(--cream); text-align: center; }
   .cta-body { font-family: var(--serif); font-size: 20px; font-weight: 300; font-style: italic; color: var(--midtone); margin-bottom: 48px; }
-
   footer { background: var(--charcoal); color: var(--ivory); padding: 48px; display: flex; justify-content: space-between; align-items: center; }
   .footer-logo { font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 1.8px; text-transform: uppercase; color: var(--ivory); }
   .footer-entity { font-family: var(--serif); font-size: 14px; font-weight: 300; color: var(--tan); }
   .footer-url { font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; color: var(--tan); text-decoration: none; }
-
   hr { border: none; border-top: 1px solid var(--tan); margin: 0; }
-
-  /* MOBILE */
   @media (max-width: 768px) {
     .hero { padding: 120px 24px 72px; }
     section { padding: 64px 24px; }
     .section-inner { padding: 0 24px; }
+    .manifesto { padding: 72px 24px; }
     footer { padding: 36px 24px; flex-direction: column; gap: 12px; text-align: center; }
     .tier-card { padding: 36px 24px; }
   }
@@ -233,6 +88,7 @@
     .hero { padding: 100px 20px 60px; }
     section { padding: 56px 20px; }
     .section-inner { padding: 0 20px; }
+    .manifesto { padding: 60px 20px; }
     footer { padding: 32px 20px; }
     .tiers-section { padding: 64px 0; }
   }
@@ -256,6 +112,15 @@
   <p class="hero-sub">Turn your contact list into a scored prospect audit, personalised outreach sequences, and competitive intelligence — delivered in 3 business days.</p>
   <p class="hero-tagline">We show you the doors, you just have to knock.</p>
   <div><a href="#tiers" class="btn">View Service Tiers</a></div>
+</div>
+
+<div class="manifesto">
+  <div class="manifesto-inner">
+    <p>You have a list of contacts. Your plan is to cold call them one by one. We take your list and narrow it down. We analyze your strengths against their weaknesses, so you know you're getting in touch with the perfect fit.</p>
+    <p>We also analyze what their competitors are doing, gaps in their content, and identify problems you can solve before your potential client even knows they have one.</p>
+    <p>It's called a prospect audit. It uses data to turn cold calls into demonstrations of your initiative, abilities, and ambition. We turn all of it into an easy-to-implement outreach system — with timelines, touchpoints, and messaging all done for you.</p>
+    <p class="manifesto-kicker">We show you the door. You just have to knock.</p>
+  </div>
 </div>
 
 <section id="what">
