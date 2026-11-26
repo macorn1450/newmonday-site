@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Monday -- Prospect Audit & Outreach Sequencing</title>
+<title>New Monday</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --cream:   #F2EDE6;
     --charcoal: #313131;
@@ -19,9 +18,7 @@
     --sans: 'DM Sans', sans-serif;
     --serif: 'Cormorant Garamond', serif;
   }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--cream);
     color: var(--charcoal);
@@ -31,8 +28,6 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -53,11 +48,7 @@
     color: var(--ivory);
     text-decoration: none;
   }
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    list-style: none;
-  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
     font-family: var(--sans);
     font-size: 10px;
@@ -70,16 +61,9 @@
     transition: opacity 0.2s;
   }
   .nav-links a:hover { opacity: 1; }
+  @media (max-width: 768px) { nav { padding: 0 24px; } .nav-links { gap: 20px; } }
+  @media (max-width: 540px) { .nav-links { display: none; } }
 
-  @media (max-width: 768px) {
-    nav { padding: 0 24px; }
-    .nav-links { gap: 20px; }
-  }
-  @media (max-width: 540px) {
-    .nav-links { display: none; }
-  }
-
-  /* HERO */
   .hero {
     background: var(--charcoal);
     color: var(--ivory);
@@ -88,15 +72,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-  }
-  .hero-eyebrow {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--tan);
-    margin-bottom: 32px;
   }
   .hero-title {
     font-family: var(--sans);
@@ -141,37 +116,13 @@
     text-decoration: none;
     transition: background 0.25s, color 0.25s;
   }
-  .btn:hover {
-    background: var(--ivory);
-    color: var(--charcoal);
-  }
-  .btn-dark {
-    background: var(--charcoal);
-    color: var(--ivory);
-    border-color: var(--charcoal);
-  }
-  .btn-dark:hover {
-    background: transparent;
-    color: var(--charcoal);
-    border-color: var(--charcoal);
-  }
+  .btn:hover { background: var(--ivory); color: var(--charcoal); }
+  .btn-dark { background: var(--charcoal); color: var(--ivory); border-color: var(--charcoal); }
+  .btn-dark:hover { background: transparent; color: var(--charcoal); border-color: var(--charcoal); }
 
-  /* SECTIONS */
-  section {
-    padding: 96px 48px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  section.full-width {
-    max-width: none;
-    padding: 96px 0;
-  }
-  .section-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 48px;
-  }
-
+  section { padding: 96px 48px; max-width: 1200px; margin: 0 auto; }
+  section.full-width { max-width: none; padding: 96px 0; }
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
   .section-label {
     font-family: var(--sans);
     font-size: 10px;
@@ -198,24 +149,12 @@
     color: var(--charcoal);
     max-width: 680px;
   }
-
-  /* WHAT WE DO */
-  .what-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: start;
-  }
+  .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   @media (max-width: 768px) { .what-grid { grid-template-columns: 1fr; } }
 
-  /* TIERS */
-  .tiers-section {
-    background: var(--charcoal);
-    color: var(--ivory);
-  }
+  .tiers-section { background: var(--charcoal); color: var(--ivory); }
   .tiers-section .section-label { color: var(--tan); }
   .tiers-section .section-title { color: var(--ivory); }
-
   .tiers-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -224,14 +163,8 @@
     border: 2px solid var(--midtone);
   }
   @media (max-width: 768px) { .tiers-grid { grid-template-columns: 1fr; } }
-
-  .tier-card {
-    background: var(--charcoal);
-    padding: 48px 36px;
-  }
-  .tier-card.featured {
-    background: #3D3D3D;
-  }
+  .tier-card { background: var(--charcoal); padding: 48px 36px; }
+  .tier-card.featured { background: #3D3D3D; }
   .tier-label {
     font-family: var(--sans);
     font-size: 10px;
@@ -250,26 +183,9 @@
     color: var(--ivory);
     margin-bottom: 8px;
   }
-  .tier-contacts {
-    font-family: var(--serif);
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--tan);
-    margin-bottom: 32px;
-  }
-  .tier-price {
-    font-family: var(--sans);
-    font-size: 36px;
-    font-weight: 200;
-    color: var(--ivory);
-    margin-bottom: 36px;
-    letter-spacing: 1px;
-  }
-  .tier-features {
-    list-style: none;
-    border-top: 1px solid rgba(251,247,242,0.15);
-    padding-top: 28px;
-  }
+  .tier-contacts { font-family: var(--serif); font-size: 15px; font-weight: 300; color: var(--tan); margin-bottom: 32px; }
+  .tier-price { font-family: var(--sans); font-size: 36px; font-weight: 200; color: var(--ivory); margin-bottom: 36px; letter-spacing: 1px; }
+  .tier-features { list-style: none; border-top: 1px solid rgba(251,247,242,0.15); padding-top: 28px; }
   .tier-features li {
     font-family: var(--sans);
     font-size: 13px;
@@ -282,232 +198,49 @@
     align-items: flex-start;
     gap: 10px;
   }
-  .tier-features li::before {
-    content: '---';
-    color: var(--tan);
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
+  .tier-features li::before { content: '-'; color: var(--tan); flex-shrink: 0; margin-top: 1px; }
 
-  /* DELIVERABLES */
-  .del-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
-  }
+  .del-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
   @media (max-width: 768px) { .del-grid { grid-template-columns: 1fr; } }
+  .del-num { font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 1.4px; color: var(--midtone); margin-bottom: 12px; }
+  .del-title { font-family: var(--sans); font-size: 13px; font-weight: 400; letter-spacing: 1.2px; text-transform: uppercase; color: var(--charcoal); margin-bottom: 10px; }
+  .del-desc { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--charcoal); opacity: 0.75; line-height: 1.6; }
 
-  .del-num {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 1.4px;
-    color: var(--midtone);
-    margin-bottom: 12px;
-  }
-  .del-title {
-    font-family: var(--sans);
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    margin-bottom: 10px;
-  }
-  .del-desc {
-    font-family: var(--serif);
-    font-size: 17px;
-    font-weight: 300;
-    color: var(--charcoal);
-    opacity: 0.75;
-    line-height: 1.6;
-  }
-
-  /* TERMS */
-  .terms-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-  }
+  .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
   @media (max-width: 768px) { .terms-grid { grid-template-columns: 1fr; } }
-
-  .terms-title {
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--midtone);
-    margin-bottom: 20px;
-  }
+  .terms-title { font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--midtone); margin-bottom: 20px; }
   .terms-list { list-style: none; }
-  .terms-list li {
-    font-family: var(--serif);
-    font-size: 17px;
-    font-weight: 300;
-    color: var(--charcoal);
-    padding: 10px 0;
-    border-bottom: 1px solid var(--tan);
-    display: flex;
-    gap: 12px;
-  }
-  .terms-list li::before {
-    content: '.';
-    color: var(--midtone);
-    flex-shrink: 0;
-  }
+  .terms-list li { font-family: var(--serif); font-size: 17px; font-weight: 300; color: var(--charcoal); padding: 10px 0; border-bottom: 1px solid var(--tan); display: flex; gap: 12px; }
+  .terms-list li::before { content: '.'; color: var(--midtone); flex-shrink: 0; }
 
-  /* CTA */
-  .cta-section {
-    background: var(--cream);
-    text-align: center;
-  }
+  .cta-section { background: var(--cream); text-align: center; }
   .cta-section .section-title { max-width: none; }
-  .cta-body {
-    font-family: var(--serif);
-    font-size: 20px;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--midtone);
-    margin-bottom: 48px;
-  }
+  .cta-body { font-family: var(--serif); font-size: 20px; font-weight: 300; font-style: italic; color: var(--midtone); margin-bottom: 48px; }
 
-  /* FOOTER */
-  footer {
-    background: var(--charcoal);
-    color: var(--ivory);
-    padding: 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer-logo {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    color: var(--ivory);
-  }
-  .footer-entity {
-    font-family: var(--serif);
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--tan);
-  }
-  .footer-url {
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--tan);
-    text-decoration: none;
-  }
+  footer { background: var(--charcoal); color: var(--ivory); padding: 48px; display: flex; justify-content: space-between; align-items: center; }
+  .footer-logo { font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 1.8px; text-transform: uppercase; color: var(--ivory); }
+  .footer-entity { font-family: var(--serif); font-size: 14px; font-weight: 300; color: var(--tan); }
+  .footer-url { font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; color: var(--tan); text-decoration: none; }
 
-  hr {
-    border: none;
-    border-top: 1px solid var(--tan);
-    margin: 0;
-  }
+  hr { border: none; border-top: 1px solid var(--tan); margin: 0; }
 
-  /* MANIFESTO */
-  .manifesto {
-    background: var(--cream);
-    padding: 96px 48px;
-    border-bottom: 1px solid var(--tan);
-  }
-  .manifesto-inner {
-    max-width: 760px;
-    margin: 0 auto;
-  }
-  .manifesto p {
-    font-family: var(--serif);
-    font-size: clamp(20px, 2.2vw, 26px);
-    font-weight: 300;
-    line-height: 1.72;
-    color: var(--charcoal);
-    margin-bottom: 36px;
-  }
-  .manifesto p.manifesto-kicker {
-    font-family: var(--sans);
-    font-size: 17px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    color: var(--midtone);
-    margin-bottom: 0;
-    margin-top: 56px;
-    padding-top: 40px;
-    border-top: 1px solid var(--tan);
-  }
+  .manifesto { background: var(--cream); padding: 96px 48px; border-bottom: 1px solid var(--tan); }
+  .manifesto-inner { max-width: 760px; margin: 0 auto; }
+  .manifesto p { font-family: var(--serif); font-size: clamp(20px, 2.2vw, 26px); font-weight: 300; line-height: 1.72; color: var(--charcoal); margin-bottom: 36px; }
+  .manifesto p.manifesto-kicker { font-family: var(--sans); font-size: 17px; font-weight: 400; letter-spacing: 0.04em; color: var(--midtone); margin-bottom: 0; margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--tan); }
 
-  /* ENGAGEMENT PATH */
-  .engagement-section {
-    background: var(--ivory);
-    border-top: 2px solid var(--tan);
-    border-bottom: 2px solid var(--tan);
-  }
+  .engagement-section { background: var(--ivory); border-top: 2px solid var(--tan); border-bottom: 2px solid var(--tan); }
   .engagement-section .section-label { color: var(--midtone); }
   .engagement-section .section-title { color: var(--charcoal); }
-
-  .engagement-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: var(--tan);
-    border: 2px solid var(--tan);
-    margin-top: 48px;
-  }
+  .engagement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--tan); border: 2px solid var(--tan); margin-top: 48px; }
   @media (max-width: 768px) { .engagement-grid { grid-template-columns: 1fr; } }
+  .engagement-card { background: var(--ivory); padding: 48px 36px; }
+  .engagement-stage { font-family: var(--sans); font-size: 10px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--midtone); margin-bottom: 20px; }
+  .engagement-title { font-family: var(--sans); font-size: 18px; font-weight: 300; letter-spacing: 1.4px; text-transform: uppercase; color: var(--charcoal); margin-bottom: 20px; }
+  .engagement-desc { font-family: var(--serif); font-size: clamp(16px, 1.6vw, 19px); font-weight: 300; line-height: 1.65; color: var(--charcoal); opacity: 0.8; margin-bottom: 32px; }
+  .engagement-price { font-family: var(--sans); font-size: 11px; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; color: var(--midtone); padding-top: 20px; border-top: 1px solid var(--tan); }
+  .engagement-price a { color: var(--midtone); text-decoration: underline; text-underline-offset: 3px; }
 
-  .engagement-card {
-    background: var(--ivory);
-    padding: 48px 36px;
-  }
-  .engagement-stage {
-    font-family: var(--sans);
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--midtone);
-    margin-bottom: 20px;
-  }
-  .engagement-title {
-    font-family: var(--sans);
-    font-size: 18px;
-    font-weight: 300;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--charcoal);
-    margin-bottom: 20px;
-  }
-  .engagement-desc {
-    font-family: var(--serif);
-    font-size: clamp(16px, 1.6vw, 19px);
-    font-weight: 300;
-    line-height: 1.65;
-    color: var(--charcoal);
-    opacity: 0.8;
-    margin-bottom: 32px;
-  }
-  .engagement-price {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--midtone);
-    padding-top: 20px;
-    border-top: 1px solid var(--tan);
-  }
-  .engagement-price a {
-    color: var(--midtone);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-
-  /* MOBILE */
   @media (max-width: 768px) {
     .hero { padding: 120px 24px 72px; }
     section { padding: 64px 24px; }
@@ -530,7 +263,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">New Monday</a>
   <ul class="nav-links">
@@ -541,45 +273,38 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <p class="hero-eyebrow">Prospect Audit &amp; Outreach Sequencing</p>
   <h1 class="hero-title">New<br>Monday</h1>
-  <p class="hero-sub">We work with production companies and creative agencies who want more from their lead list -- and from their business development. The prospect audit is where it starts.</p>
+  <p class="hero-sub">We work with production companies and creative agencies who want more from their lead list, and from their business development. The prospect audit is where it starts.</p>
   <p class="hero-tagline">We show you the door, you just have to knock.</p>
-  <div>
-    <a href="#tiers" class="btn">View Service Tiers</a>
-  </div>
+  <div><a href="#tiers" class="btn">View Service Tiers</a></div>
 </div>
 
-<!-- MANIFESTO -->
 <div class="manifesto">
   <div class="manifesto-inner">
     <p>You're a production company or creative agency with a list of leads. Your plan is to cold call them one by one. We take your list and hyper focus it for success. We analyze your strengths against their weaknesses, so you know you're getting in touch with the perfect fit.</p>
     <p>We also analyze what their competitors are doing, gaps in their content, and identify problems you can solve before your potential client even knows they have one.</p>
-    <p>It's called a prospect audit. It uses data to turn cold calls into demonstrations of your initiative, abilities, and ambition. We turn all of it into an easy-to-implement outreach system -- with timelines, touchpoints, and messaging all done for you.</p>
-    <p>And for clients who want to go further -- the audit is just the beginning.</p>
+    <p>It's called a prospect audit. It uses data to turn cold calls into demonstrations of your initiative, abilities, and ambition. We turn all of it into an easy-to-implement outreach system, with timelines, touchpoints, and messaging all done for you.</p>
+    <p>And for clients who want to go further, the audit is just the beginning.</p>
     <p class="manifesto-kicker">We show you the door. You just have to knock.</p>
   </div>
 </div>
 
-<!-- WHAT WE DO -->
 <section id="what">
   <p class="section-label">Our Work</p>
   <h2 class="section-title">What We Do</h2>
   <div class="what-grid">
     <div>
-      <p class="section-body">New Monday turns your existing lead list into a scored prospect audit, personalised outreach sequences, and competitive intelligence -- delivered as ready-to-use files.</p>
+      <p class="section-body">New Monday turns your existing lead list into a scored prospect audit, personalised outreach sequences, and competitive intelligence, delivered as ready-to-use files.</p>
     </div>
     <div>
-      <p class="section-body" style="opacity: 0.7;">You bring the list. We bring the system. Every lead scored on fit, seniority, accessibility, and production match -- with LinkedIn-ready messaging and competitive hooks baked in. Need just the audit? We deliver it and you're done. Want someone in your corner beyond that? We're built for that too.</p>
+      <p class="section-body" style="opacity: 0.7;">You bring the list. We bring the system. Every lead scored on fit, seniority, accessibility, and production match, with LinkedIn-ready messaging and competitive hooks baked in. Need just the audit? We deliver it and you're done. Want someone in your corner beyond that? We're built for that too.</p>
     </div>
   </div>
 </section>
 
 <hr>
 
-<!-- TIERS -->
 <section class="full-width tiers-section" id="tiers">
   <div class="section-inner">
     <p class="section-label">The Audit</p>
@@ -595,18 +320,18 @@
         <ul class="tier-features">
           <li>Scored prospect audit</li>
           <li>5-touch outreach sequences</li>
-          <li>Competitive hooks -- top 5</li>
+          <li>Competitive hooks, top 5</li>
         </ul>
       </div>
       <div class="tier-card featured">
-        <p class="tier-label">Tier 02 -- Most Popular</p>
+        <p class="tier-label">Tier 02 / Most Popular</p>
         <h3 class="tier-name">Standard</h3>
         <p class="tier-contacts">Up to 50 leads</p>
         <p class="tier-price">$997</p>
         <ul class="tier-features">
           <li>Scored prospect audit</li>
           <li>5-touch outreach sequences</li>
-          <li>Competitive analysis -- top 10</li>
+          <li>Competitive analysis, top 10</li>
         </ul>
       </div>
       <div class="tier-card">
@@ -628,26 +353,25 @@
   </div>
 </section>
 
-<!-- ENGAGEMENT PATH -->
 <section class="full-width engagement-section" id="engagement">
   <div class="section-inner">
     <p class="section-label">The Full Engagement</p>
     <h2 class="section-title">Three Stages, One Relationship</h2>
     <div class="engagement-grid">
       <div class="engagement-card">
-        <p class="engagement-stage">Stage 01 -- Entry</p>
+        <p class="engagement-stage">Stage 01 / Entry</p>
         <h3 class="engagement-title">The Audit</h3>
         <p class="engagement-desc">We score your leads, build your outreach sequences, and map the competitive landscape. Ready-to-use files delivered in 3 business days. Every engagement begins here.</p>
-        <p class="engagement-price">From $497 -- <a href="#tiers">view audit tiers</a></p>
+        <p class="engagement-price">From $497 / <a href="#tiers">view audit tiers</a></p>
       </div>
       <div class="engagement-card">
-        <p class="engagement-stage">Stage 02 -- Retained</p>
+        <p class="engagement-stage">Stage 02 / Retained</p>
         <h3 class="engagement-title">The Retainer</h3>
         <p class="engagement-desc">Quarterly pipeline refreshes, ongoing sequence refinement, and market intelligence. We stay embedded in your operation so your outreach never goes cold.</p>
         <p class="engagement-price">Let's talk.</p>
       </div>
       <div class="engagement-card">
-        <p class="engagement-stage">Stage 03 -- Embedded</p>
+        <p class="engagement-stage">Stage 03 / Embedded</p>
         <h3 class="engagement-title">The Partnership</h3>
         <p class="engagement-desc">Outreach execution, list development, creative and content strategy. We work alongside you as a full extension of your business development team.</p>
         <p class="engagement-price">Let's talk.</p>
@@ -656,7 +380,6 @@
   </div>
 </section>
 
-<!-- DELIVERABLES -->
 <section id="deliverables">
   <p class="section-label">What You Receive</p>
   <h2 class="section-title">Deliverables</h2>
@@ -664,7 +387,7 @@
     <div class="del-item">
       <p class="del-num">01</p>
       <p class="del-title">Scored Prospect Audit</p>
-      <p class="del-desc">Every contact scored on fit, seniority, accessibility, production match, and overall priority -- delivered as a ready-to-filter .xlsx file.</p>
+      <p class="del-desc">Every contact scored on fit, seniority, accessibility, production match, and overall priority, delivered as a ready-to-filter .xlsx file.</p>
     </div>
     <div class="del-item">
       <p class="del-num">02</p>
@@ -681,7 +404,6 @@
 
 <hr>
 
-<!-- TIMELINE -->
 <section>
   <p class="section-label">The Details</p>
   <div class="terms-grid">
@@ -689,7 +411,7 @@
       <p class="terms-title">Timeline &amp; Revisions</p>
       <ul class="terms-list">
         <li>Delivery within 3 business days of completed intake</li>
-        <li>One revision round included -- requested within 5 business days</li>
+        <li>One revision round included, requested within 5 business days</li>
         <li>Additional revisions billed at $150/hr</li>
       </ul>
     </div>
@@ -698,15 +420,13 @@
 
 <hr>
 
-<!-- CTA -->
 <section id="contact" class="cta-section">
   <p class="section-label">Get Started</p>
   <h2 class="section-title" style="max-width: none; text-align: center;">Ready to Start the Conversation?</h2>
-  <p class="cta-body">Whether you want a one-time audit or a long-term partner -- it starts the same way.</p>
+  <p class="cta-body">Whether you want a one-time audit or a long-term partner, it starts the same way.</p>
   <a href="mailto:hello@newmonday.biz" class="btn btn-dark">hello@newmonday.biz</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <span class="footer-logo">New Monday</span>
   <span class="footer-entity">New Monday LLC</span>
